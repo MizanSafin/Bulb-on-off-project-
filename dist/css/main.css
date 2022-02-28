@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bulb_wrapper {
+  min-height: 100vh;
+  background-color: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bulb_wrapper label {
+  margin-top: 20px;
+  width: 130px;
+  height: 65px;
+  background: #212121;
+  position: relative;
+  border-radius: 10px;
+}
+
+.bulb_wrapper label input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.bulb_wrapper label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 65px;
+  background: #333;
+  border: 6px solid #4e4e4e;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .6s;
+  transition: .6s;
+  cursor: pointer;
+}
+
+label input:checked ~ span {
+  left: 75px;
+}
+
+label span ion-icon {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+label input:checked ~ span ion-icon {
+  color: white;
+  -webkit-filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+          filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+label .display_bulb {
+  border: 5px dashed cornflowerblue;
+  border-radius: 20px;
+  position: absolute;
+  width: 350px;
+  height: 480px;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("/img/Balb_off.png");
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 2.5s linear;
+  transition: 2.5s linear;
+}
+
+label input:checked ~ .display_bulb {
+  background: url("/img/Balb_on.png");
+  background-position: center center;
+  background-size: cover;
+}
+/*# sourceMappingURL=main.css.map */
